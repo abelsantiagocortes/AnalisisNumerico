@@ -2,7 +2,9 @@
 import numpy as np
 import math
 
-
+#Main
+print("Algortimo Posicion Falsa")
+print("---------------------------------")
 
 # Definición de la Función f(x)
 def f(x):
@@ -13,7 +15,7 @@ def formuPosicionFalsa(x0,x1,iterr):
     x = x0 - ((x1-x0)/(f(x1)-f(x0)))*f(x0)
     iterr+=1
     #Impresion iteraciones
-    print('#',iterr,'. X:',x)
+    print("#", iterr, " X= ", x1, "                       F(x)= ", f(x1))
     return x,iterr
 
 
@@ -37,10 +39,9 @@ def PosicionFalsa(x0,x1,numIter,tol):
             break
         x=x3
     if iterr == numIter:
-        print('Result not found.\nTry again with more iterations.')
-#Main
-print("Algortimo Posicion Falsa")
-print("---------------------------------")
+        print('No se encontro el resultado, pruebe con mas iteraciones')
+
+#llamada por intevalos
 PosicionFalsa(0,1,100,10e-8)
 PosicionFalsa(1,2,100,10e-8)
 
